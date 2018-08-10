@@ -12,3 +12,8 @@ RUBY GEM
 MVC FRAMEWORK
 -Model View Controller, application architecture to separate concerns and organize applications
 -encourages conventions: logic within models, code flow within controllers & content display within views
+
+WHAT RUBY ON RAILS IS NOT
+-not a programming language, common misconception but it is a set of code libraries built in Ruby
+-not a slow framework, built properly, Rails projects can be fast as other frameworks
+  -it's perfect for microservice apps which can be some of the fastest/best performing apps

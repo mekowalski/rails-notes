@@ -1,0 +1,14 @@
+RUBY ON RAILS
+
+WEB FRAMEWORK
+-provides developers the tools needed to build applications
+-almost every application has: routing, asset mgmt, db connections, etc
+-web framework provides developers baseline tools so that it doesn't need to be created for each new project
+
+RUBY GEM
+-ROR is a set of Ruby code libraries
+-entire codebase of open source therefore having access to review framework for understanding of how it works
+
+MVC FRAMEWORK
+-Model View Controller, application architecture to separate concerns and organize applications
+-encourages conventions: logic within models, code flow within controllers & content display within views

@@ -17,3 +17,13 @@ WHAT RUBY ON RAILS IS NOT
 -not a programming language, common misconception but it is a set of code libraries built in Ruby
 -not a slow framework, built properly, Rails projects can be fast as other frameworks
   -it's perfect for microservice apps which can be some of the fastest/best performing apps
+
+
+CREATE DATABASE: create a db by running `rake db: create` in terminal
+
+START RAILS SERVER: run `rails s or rails server` in terminal
+
+RAILS CONSOLE
+-rails c: starts up rails console in server
+-perform tasks such as db queries, application code, full CRUD tasks with db, allows switching of permanent database changes and run sin sandbox mode for tests
+-Rails console loads full Rails environment providing access to specific methods/db's

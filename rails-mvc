@@ -1,0 +1,17 @@
+MODELS VIEWS CONTROLLERS
+
+MODELS
+-Ruby class that can have corresponding database tables giving access to many methods
+-model performs number of tasks to create something that controllers & views don't know about
+-domain logic, db queries, data relationships, custom algorithms
+-IMPORTANT: single responsibility, if tasks are performed outside model scope, then move to its own class
+
+
+CONTROLLERS
+-connects and manages data flow between router, models and views
+
+
+VIEWS
+-contains least amount of logic of MVC architecture
+-render(display) whatever is sent from the database
+-supplies ActionView helper methods to implement code efficiently

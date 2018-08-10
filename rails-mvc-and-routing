@@ -1,0 +1,34 @@
+MODELS VIEWS CONTROLLERS...
+
+MODELS
+-Ruby class that can have corresponding database tables giving access to many methods
+-model performs number of tasks to create something that controllers & views don't know about
+-domain logic, db queries, data relationships, custom algorithms
+-IMPORTANT: single responsibility, if tasks are performed outside model scope, then move to its own class
+
+
+CONTROLLERS
+-connects and manages data flow between router, models and views
+
+
+VIEWS
+-contains least amount of logic of MVC architecture
+-render(display) whatever is sent from the database
+-supplies ActionView helper methods to implement code efficiently
+
+
+...AND ROUTING/RAILS STATIC REQUESTS
+
+ROUTING
+-static route: renders a view that doesn't change, no params sent to it(eg: About/Contact pages)
+-dynamic route: pages accepting params and rendering different content based on those params(eg: blog post page contains specific article)
+
+RAILS APPLICATION FLOW
+1. URL entered in browser, HTTP request
+2. request sent to server where app's router interprets request and sends message to mapped controller
+3. controller communicates with view file mapped to controller action
+4. server returns HTTP response containing view page display in browser
+
+RENDERING
+-explicit: Rails lets you dictate which view file to have the controller mapped to
+-implicit: Rails follows standard convention that automatically looks for view file with same name as controller action

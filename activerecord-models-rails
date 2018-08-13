@@ -16,3 +16,13 @@ ACTIVERECORD MODELS
 validations, model associations, callbacks, custom algorithms
 
 *data aspect of application can work separately from view and data flow logic*
+
+`rake db:migrate`(i've done this with `rails db:migrate`) updates model with a new table and its given
+attributes
+
+-best practice, convention to have controller and view files following the proper name of the model
+-helps with MVC associations and readable files/code
+eg: Dog
+    Model: app/models/dog.rb
+    Controller: app/controllers/dogs_controller.rb
+    Views: app/views/dogs/all the other files for related Dog views

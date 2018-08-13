@@ -1,0 +1,16 @@
+ACTIVERECORD MODELS AND RAILS
+
+ACTIVERECORD
+-ORM: Object Relational Mapping system, enables app to manage data in method driven structure
+-Rails utilizes the built-in ORM of ActiveRecod to model aspects of application
+-ORM enables you to run queries, add records & perform all traditional db processes without writing SQL manually
+eg: SELECT * FROM posts (SQL)
+    Post.all (ActiveRecord)
+
+
+ACTIVERECORD MODELS
+-model files create an organized layer of abstraction for data
+-model file is a Ruby class inhertied from ActiveRecord::Base class (inherit methods in working db)
+-also can treat like a Ruby class, creating methods, data attributes, etc
+-typical model files contain: custom scopes, model instance methods, default settings for db columns,
+validations, model associations, callbacks, custom algorithms

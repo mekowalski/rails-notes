@@ -14,3 +14,5 @@ ACTIVERECORD MODELS
 -also can treat like a Ruby class, creating methods, data attributes, etc
 -typical model files contain: custom scopes, model instance methods, default settings for db columns,
 validations, model associations, callbacks, custom algorithms
+
+*data aspect of application can work separately from view and data flow logic*

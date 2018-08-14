@@ -1,8 +1,22 @@
 -Rails is very pattern oriented
+-Rails is a giant framework, level up from Sinatra
 -Key Differences
   -Routing is DSL(domain specific language) separate from controllers
+    routing is part of a routing file (config/routes.rb)
+    define all routes and maps them to controllers#actions
+
   -controller actions are Ruby methods, no DSL
+    controllers#actions become Ruby methods, not macros like in Sinatra
+
   -explicit and implicit view rendering
+    an empty action in the controller will implicitly render(eg: dogs#show will automatically render)
+
   -instrumentation and generators
+    Rails apps comes with an immense amount of instrumentation
+
   -ActionView
+    Rails provides actionview helpers to automatically generate HTML instead of manually writing
+    knows about Ruby, ActiveRecord, Rails pattern
+
   -Asset Pipeline
+    for JavaScript and CSS

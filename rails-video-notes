@@ -32,4 +32,17 @@
 
 -App directory is where most of the code is created for the applications
 
--When in a rails directory, `rails` in the terminal is about instrumenting the current application 
+-When in a rails directory, `rails` in the terminal is about instrumenting the current application
+
+-What are the URLs of this application
+-How is the user going to access the functionalities
+-URLs are close to user, user manipulates application, the interface is URL centric(outside)
+-Exact opposite of the application is the database(inside)
+-Think both about URL and database, developing towards a middle ground place
+  URLs--> Routes--> Controller#Actions--> Models--> Database--> Views
+
+-Request Cycle
+  what are the chain of events for every request
+  begin with outside(url) and work towards inside(database)
+
+-Rails helps generate(create) skeleton code for when you need a new component

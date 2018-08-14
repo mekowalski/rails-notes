@@ -26,14 +26,3 @@ eg: Dog
     Model: app/models/dog.rb
     Controller: app/controllers/dogs_controller.rb
     Views: app/views/dogs/all the other files for related Dog views
-
--What are the URLs of this application
--How is the user going to access the functionalities
--URLs are close to user, user manipulates application, the interface is URL centric(outside)
--Exact opposite of the application is the database(inside)
--Think both about URL and database, developing towards a middle ground place
-  URLs--> Routes--> Controller#Actions--> Models--> Database--> Views
-
--Request Cycle
-  what are the chain of events for every request
-  begin with outside(url) and work towards inside(database)

@@ -1,0 +1,8 @@
+-Rails is very pattern oriented
+-Key Differences
+  -Routing is DSL(domain specific language) separate from controllers
+  -controller actions are Ruby methods, no DSL
+  -explicit and implicit view rendering
+  -instrumentation and generators
+  -ActionView
+  -Asset Pipeline

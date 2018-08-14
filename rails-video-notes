@@ -46,3 +46,8 @@
   begin with outside(url) and work towards inside(database)
 
 -Rails helps generate(create) skeleton code for when you need a new component
+-rails console will read all environment code
+
+-Table name: lower case plural name of model -beers
+-Model filename: singular lowercase(under_scored) -beer.rb
+-Class name for model: singular camelCase -Beer

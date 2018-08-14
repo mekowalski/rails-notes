@@ -33,3 +33,7 @@ eg: Dog
 -Exact opposite of the application is the database(inside)
 -Think both about URL and database, developing towards a middle ground place
   URLs--> Routes--> Controller#Actions--> Models--> Database--> Views
+
+-Request Cycle
+  what are the chain of events for every request
+  begin with outside(url) and work towards inside(database)

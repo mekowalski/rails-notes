@@ -10,7 +10,7 @@ eg: SELECT * FROM posts (SQL)
 
 ACTIVERECORD MODELS
 -model files create an organized layer of abstraction for data
--model file is a Ruby class inhertied from ActiveRecord::Base class (inherit methods in working db)
+-model file is a Ruby class inherited from ActiveRecord::Base class (inherit methods in working db)
 -also can treat like a Ruby class, creating methods, data attributes, etc
 -typical model files contain: custom scopes, model instance methods, default settings for db columns,
 validations, model associations, callbacks, custom algorithms
@@ -26,3 +26,10 @@ eg: Dog
     Model: app/models/dog.rb
     Controller: app/controllers/dogs_controller.rb
     Views: app/views/dogs/all the other files for related Dog views
+
+-What are the URLs of this application
+-How is the user going to access the functionalities
+-URLs are close to user, user manipulates application, the interface is URL centric(outside)
+-Exact opposite of the application is the database(inside)
+-Think both about URL and database, developing towards a middle ground place
+  URLs--> Routes--> Controller#Actions--> Models--> Database--> Views

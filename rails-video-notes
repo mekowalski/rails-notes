@@ -1,5 +1,7 @@
 -Rails is very pattern oriented
 -Rails is a giant framework, level up from Sinatra
+-Rack based server(config.ru helps with mounting rails app)
+
 -Key Differences
   -Routing is DSL(domain specific language) separate from controllers
     routing is part of a routing file (config/routes.rb)
@@ -20,3 +22,14 @@
 
   -Asset Pipeline
     for JavaScript and CSS
+
+-Rails Gem
+  -1 gem with 20 or more dependencies, mixture of many different frameworks
+  -ActiveRecord: models
+  -ActionController: controllers
+  -ActionViews: views
+  -Access to cli called Rails, to access parts of Rails stack
+
+-App directory is where most of the code is created for the applications
+
+-When in a rails directory, `rails` in the terminal is about instrumenting the current application 

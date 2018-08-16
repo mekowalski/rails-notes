@@ -69,3 +69,8 @@ eg: get '/beers' => 'beers#index'
   -many methods for links
   -link_to: (helper), method that accepts 2 arguments
   <% link_to("About Beers App", "/about") %>
+  -when generating links in Rails app, don't harced to be string, rely on methods of Prefix in rake routes
+  table
+  eg: about_beers_path
+
+-rake routes gives a routing table, not created for you but gives Verb, URI patter & controllers#action

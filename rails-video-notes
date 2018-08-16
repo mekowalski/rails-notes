@@ -54,4 +54,11 @@
 
 -Rails routes maps URL to controller and action
 -Controller is a class, action is a method(mirror Ruby paradox)
--
+
+-config/routes.rb(tells how routes work)
+-GET is a method accepts one argument that's a hash
+eg: get '/beers' => 'beers#index'
+
+-Rails will automatically try to render a template and direct you where to look
+-Rails convention: app/views/controller_name/action_name.html.erb
+                   app/views/beers/index.html.erb

@@ -62,3 +62,10 @@ eg: get '/beers' => 'beers#index'
 -Rails will automatically try to render a template and direct you where to look
 -Rails convention: app/views/controller_name/action_name.html.erb
                    app/views/beers/index.html.erb
+
+-instance variables defined in controller action get passed to the views
+-instance variables should be named concisely regarding model
+-to generate link in Rails, use ActionView, to help write HTML better
+  -many methods for links
+  -link_to: (helper), method that accepts 2 arguments
+  <% link_to("About Beers App", "/about") %>

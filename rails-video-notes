@@ -51,3 +51,7 @@
 -Table name: lower case plural name of model -beers
 -Model filename: singular lowercase(under_scored) -beer.rb
 -Class name for model: singular camelCase -Beer
+
+-Rails routes maps URL to controller and action
+-Controller is a class, action is a method(mirror Ruby paradox)
+-

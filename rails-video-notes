@@ -74,3 +74,10 @@ eg: get '/beers' => 'beers#index'
   eg: about_beers_path
 
 -rake routes gives a routing table, not created for you but gives Verb, URI patter & controllers#action
+
+
+-application will have thousands of URLs therefore don't want to hardcode them as strings, should be a
+_path with PREFIX used
+-if you wanted to change a string of a URL, you would have to find that string everywhere in the app and
+manually change it
+-relying on route helpers(beer_path) to update code if the definition of that route changes

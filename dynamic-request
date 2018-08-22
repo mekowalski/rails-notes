@@ -12,3 +12,18 @@ Static: render pages that have hard coded path connected
 
 Dynamic: render different data based on the params passed to route
   eg: 12 is passed as a param to /dogs/:id route, app should render data for dog with id of 12
+
+
+#app/controllers/dogs_controller.rb
+
+class DogsController < ApplicationController
+  def show
+    @dog = Dog.find(params[:id])
+  end
+end
+
+^^^
+-show action is running DB query on Dog model that will return dog with ID that matches params
+-it will store record in the @dog instance variable & make it available to show.html.erb file
+#app/views/dogs/show.html.erb
+<h1><%= @dog.name %><h1>

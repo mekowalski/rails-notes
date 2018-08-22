@@ -16,4 +16,9 @@ Paths vs Route Helpers
 -More dynamic since they're methods & not simply strings, if something changes with route there are many
   cases where the code itself won't need to change at all
 -Clean up view & controller code & assist with readability *cannot use helper methods in model files*
--
+-More natural to be able to pass arguments into a method as opposed to using string interpolation
+  eg: dog_path(dog, opt_in: true) <---more readable than
+      'dogs/<%= dog.id %>?opt_in=true'
+-Translate directly into HTML-friendly paths, route helpers convert any weird characters in URLs to be read
+  properly by browser
+  eg: &, %, ?, etc

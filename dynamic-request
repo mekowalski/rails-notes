@@ -1,0 +1,14 @@
+Dynamic Routes, breakdown of dynamic route process flow:
+  1. routes.rb file takes request & processes is like normal except it also parses the :id param & passes
+     it through controller
+     eg: /dogs/12, id:12
+  2. the controller action will parse the :id param and run query on the Dog model, storing the result in
+     an instance variable
+  3. controller passes instance variable to associated view, renders details of the specific record for
+     the client
+
+Static: render pages that have hard coded path connected
+  eg: /welcome path will always show the welcome page
+
+Dynamic: render different data based on the params passed to route
+  eg: 12 is passed as a param to /dogs/:id route, app should render data for dog with id of 12

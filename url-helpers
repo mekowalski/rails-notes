@@ -22,3 +22,24 @@ Paths vs Route Helpers
 -Translate directly into HTML-friendly paths, route helpers convert any weird characters in URLs to be read
   properly by browser
   eg: &, %, ?, etc
+
+
+Implementing Route Helpers
+#config/routes.rb
+  resources :dogs, only: [:index, :show]
+
+-rake routes and its table
+  Prefix: for route helper methods, 2 most common method types are _path & _url
+  best to use _path version so nothing breaks if server domain changes
+  -_path: gives relative path
+  -_url: renders the full URL
+
+  HTTP verb eg: GET, POST, etc
+
+  URL Pattern: shows what path for the route will be & what params needed
+
+  Controller#Action: shows controller and action with syntax controller#action
+    eg: dogs#index
+
+
+-Predictable names are created for route helper methods, rake routes helps you find custom paths

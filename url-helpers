@@ -1,0 +1,19 @@
+Paths vs Route Helpers
+-Meeting up with friends at El Moro, two options on how to get there
+  1. Walk on the streets to El Moro
+  2. Take a cab to El Moro
+
+-walking: similar to hard-coded route paths, technically can work
+ slow, potentially error-prone(1 wrong turn can lead to to different part or town)
+ if location changes, requires a bit more manual work to adjust and walk to new destination
+ eg: '/dogs/#{@dogs.id}'
+
+-taxi: similar to route helper
+ provide address to driver & they navigate streets for you
+ faster than walking & if location changes, simple to adjust course
+ eg: dog_path(@dog)
+
+-More dynamic since they're methods & not simply strings, if something changes with route there are many
+  cases where the code itself won't need to change at all
+-Clean up view & controller code & assist with readability *cannot use helper methods in model files*
+-

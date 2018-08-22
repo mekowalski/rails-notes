@@ -1,0 +1,13 @@
+Roy Thomas Fielding created RESTful standard for web application URLs
+  -REpresentational State Transfer
+
+REST Workflow
+  1. fill out form on 'New Photo' page, click submit
+  2. Data concerning you, photo content & any additional info is sent to application server
+  3. Server interprets info, recognizes the request for a new photo, generates new record in DB, performs
+     numerous background tasks(update a counter, possibly send email notification)
+  4. Server sends back response to the client.  Not necessarily mean photo is posted, could be an error
+     posting or similar.  In a successful case, server will send success message & tells browser which page
+     to render.
+  5. Browser receives server info & gives user feedback.  Shows user a message stating their photo posted
+     successfully

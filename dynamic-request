@@ -27,3 +27,10 @@ end
 -it will store record in the @dog instance variable & make it available to show.html.erb file
 #app/views/dogs/show.html.erb
 <h1><%= @dog.name %><h1>
+
+-Refactor drawn out GET method in routes.rb file
+-If there are only a few of the 7 RESTful routes set up, use an 'only' option
+
+#routes.rb
+BEFORE: get 'dogs/:id', to: 'dogs#show'
+AFTER: resources :dogs, only: :show

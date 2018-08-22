@@ -41,5 +41,20 @@ Implementing Route Helpers
   Controller#Action: shows controller and action with syntax controller#action
     eg: dogs#index
 
-
 -Predictable names are created for route helper methods, rake routes helps you find custom paths
+
+
+link_to Method
+-automatically create an HTML 'a' tag
+  eg: link_to  instead of
+  <a href="blah-blah"></a>
+
+BEFORE
+<% @dogs.each do |dog| %>
+  <div><a href='<%= "/dogs/#{dog.id}" %>'><%= dog.name %></a></div>
+<% end %>
+
+AFTER
+<% @dogs.each do |dog| %>
+  <div><%= link_to dog.title, dog_path(dog) %></div>
+<% end %>

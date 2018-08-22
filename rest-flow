@@ -11,3 +11,16 @@ REST Workflow
      to render.
   5. Browser receives server info & gives user feedback.  Shows user a message stating their photo posted
      successfully
+
+
+RESTful Convention
+-Principles are built into the core therefore the tools necessary to follow standardized routing procedures
+ will be present
+
+-Four key actions: Create, Read, Update, Destory(CRUD)
+ + 'index' page to list out items
+ + form for creating and form for updating
+ = 7 routes
+
+-HTTP verbs to help with mapping different route helpers
+-Within a Rails Controller, the 7 methods would be defined to complete the function of each routes

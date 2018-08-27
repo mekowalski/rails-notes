@@ -1,0 +1,15 @@
+RAILS CONTROLLER CONVENTIONS
+Rails conventions separate logic for rendering from action that manages DB record alteration
+-new controller action simply renders new form
+-create action actually processes data insertion into DB
+
+-EDIT: will render edit form
+-UPDATE: will methodically process updates for DB record itself
+
+
+#routes.rb
+get '/dogs/:id/edit', to: 'dogs#edit', as: :edit_dog
+
+patch 'dogs/:id' to: 'dogs#update'
+
+resources :dogs, only[:index, :show, :new, :create, :edit, :update]

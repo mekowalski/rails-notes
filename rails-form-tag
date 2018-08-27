@@ -22,3 +22,31 @@ end
 <%= params.inspect %>
 
 -Traditionally, Rails apps use model[attribute] syntax for name attributes eg: dog[name]
+
+-Need to update form tag with an 'action' attribute AND a method attribute to submit data via POST http verb
+<form action='<%= dogs_path %>' method='POST'>
+
+-Then build a 'create' route for the routing system knows what to do when a POST request is sent
+#config.rb
+resources :dogs, only: [:index, :new, :create]
+
+
+CSRF: Cross-Site Request Forgery
+-log into your bank site, after logging in & checking account balance, you open another tab to another site
+-unknowingly, the other site is actually a hacking site running scripts in the background as soon as you get
+ to the landing page
+-one of the scripts hijacks the banking session that is open in the previous tab & submits a form to transfer
+ money
+-banking form can't differentiate whether request is made by logged in user or not, therefore processes the
+ transaction to the one who made the request
+
+-Rails blocks CSRF by requiring unique auth token to be submitted each forms
+-integrate form_authenticity_token helper into form as hidden field
+<form...>...
+  label...
+  input...
+  ...
+
+  <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+  submit...
+</form>

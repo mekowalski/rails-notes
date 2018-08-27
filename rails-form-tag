@@ -1,0 +1,24 @@
+Rails forms gives ability to submit data into form fields
+  -create new DB records, build contact form, integrate search engine field, etc
+
+#routes.rb file
+resources :dogs, only: [:index, :new]
+
+#DogsController
+def new
+end
+
+#views/dogs/new.html.erb
+<form>
+  <label>Dog Name: </label><br>
+  <input type='text' id='dog_name' name='dog[name]'><br>
+
+  <label>About this dog: </label><br>
+  <textarea id='dog_description' name='dog[description]'></textarea><br>
+
+  <input type='submit' value='Submit Info'>
+</form>
+
+<%= params.inspect %>
+
+-Traditionally, Rails apps use model[attribute] syntax for name attributes eg: dog[name]

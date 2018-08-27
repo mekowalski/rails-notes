@@ -1,0 +1,26 @@
+Create, C in CRUD life cycle
+-saves new Model object and redirects to newly created show page
+
+#DogsController
+-create new Dog instance
+-pass params from form
+-save the record
+
+def create
+  dog = Dog.new
+  dog.name = params[:name]
+  dog.description = params[:description]
+  dog.save
+end
+
+^^going to /digs/new will give a 'Template is missing' error
+-Therefore refactor code to leverage route helper method
+-Refactor variable into an instance variable
+
+def create
+  @dog = Dog.new
+  @dog.name = params[:name]
+  @dog.description = params[description]
+  @dog.save
+  redirect_to dog_path(@dog) <---redirect to new resource's show page
+end

@@ -7,9 +7,34 @@ Rails conventions separate logic for rendering from action that manages DB recor
 -UPDATE: will methodically process updates for DB record itself
 
 
-#routes.rb
+#edit form
+
+-Draw GET route for edit form, need to know which record to edit therefore accept :id as param
 get '/dogs/:id/edit', to: 'dogs#edit', as: :edit_dog
 
+-Draw additional route to handle UPDATE action, accepting :id param to alter
 patch 'dogs/:id' to: 'dogs#update'
 
+PUT: replace a whole resource
+PATCH: send a set of changes to a resource
+
+-Shortcut to resources in the routes file
 resources :dogs, only[:index, :show, :new, :create, :edit, :update]
+
+-Add in the controller actions
+def edit
+end
+
+def update
+end
+
+-Create edit view templates in app/views/dogs/edit.html.erb
+<%= form_tag dogs_path do %>
+  <label>Dog name:</label><br>
+  <%= text_field_tag :name %><br>
+
+  <label>Dog Description</label><br>
+  <%= text_area_tag :description %><br>
+
+  <%= submit_tag "Submit Dog" %>
+<% end %>

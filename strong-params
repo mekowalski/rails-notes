@@ -1,0 +1,3 @@
+Strong Params: ensure that when a form is submitted, only the field wanted will get by
+-Rails needs to be told which params are allowed to be submitted through form to DB
+-Default is to let nothing through

@@ -1,3 +1,20 @@
 Strong Params: ensure that when a form is submitted, only the field wanted will get by
 -Rails needs to be told which params are allowed to be submitted through form to DB
 -Default is to let nothing through
+
+PERMIT vs REQUIRE
+Permit: is looser, means params hash may have whatever keys are in it, if it doesn't have one of the keys,
+  -it's not an issue it just won't accept other keys
+
+Require: most restrictive, params that get passed in must contain a keym if not included it fails and you'll
+  -get and error
+
+Keeping strong params DRY
+-with standard CRUD setup, implementation of same code is present
+-therefore abstract strong params into its own private method in the controller
+-make a change and both methods(#create & #update) will automatically be able to have proper attr whitelisted
+
+private
+def beer_params
+  params.require(:beer).permit(:name, :description, :abv, :location)
+end

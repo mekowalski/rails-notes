@@ -1,0 +1,18 @@
+form_tag: helper method allows automatic generation of HTML and data integration to both auto-fill values
+  -and submit data to the controller to create/update a record in DB
+  -allows passing in route for where params of form will be sent, the HTTP method utilized and attr for each
+  field
+
+  ISSUES with FORM_TAG
+  -form manually passed to the route where params will be submitted
+  -form has no knowledge of goal, doesn't know if form is meant for updating/creating record
+  -duplicate code throughout form not adhering to DRY principles
+
+form_for: accepts instance of model as argument, uses arg to make many assumptions
+  -yields an object class FormBuilder
+  -automatically knows standard route for form data following RESTful convention
+  -gives option to dynamically change submit button text
+
+Rule of thumb for FORM_FOR
+-when form directly connects to a model
+-simple need on HTML form generated(search or contact form)

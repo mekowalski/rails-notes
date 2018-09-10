@@ -1,0 +1,18 @@
+Rails system has a great amount of generators to do the manual labor, instead of creating DB tables,
+configuring views, drawing individual routes and bug prone features
+
+Rails Generators
+-Setup basic specs for app's test suite, won't write complex logic tests but will provide basic examples
+-Same way each time, standardize code & enables dev to be more efficient
+-It follows Rails RESTful naming patterns, removes dupe code, uses partials, etc
+
+Abusing Generators
+-Should use a generator only when the task requires it
+  eg: chainsaw is a great tool but you wouldn't use it for every task around the house such as cleaning
+
+-Certain G's create a bit more code than necessary
+
+RAILS GENERATE
+-all Rails generators are entered as commands into terminal with syntax:
+  rails generate <name of generator> <options> --no-test-framework
+  or rails g (for short)

@@ -10,3 +10,9 @@ SCAFFOLD G
 Scaffold can elegantly implement solution to remove dupe code
 eg: before_action :set_article, only: [:show, :edit, :update, :destroy]
 -Returns class instance variable that each controller actions will automatically have because of before_action
+
+
+SCAFFOLD vs RESOURCE
+Resource G is a good alternative instead of using Scaffold
+  -can still control implementation 
+Scaffold G is very opinionated in building a specific system, not the way to regularly build app

@@ -1,0 +1,51 @@
+AR Validations validate models before they touch DB, harder to end up with bad data
+
+Validations: special methods in Rails that go at top of model class defs and prevent them from being saved to
+  DB if data doesn't look right
+  -job of protecting DB from invalid code
+
+AR Validations are not DB Validations
+-relational DB's such as SQLite have data validations to check things like length and data type
+-Rails does not use any of that
+
+Invalid Data
+eg: phone #  970-856-147 is invalid, this will be looked over
+
+Validations Protect DB
+-Invalid data hides in DB until worst possible moment, then jumps out ruining everything by causing errors
+-Much easier to handle bad data first, then focus on handling edge cases that are truly unpredictable
+-validates: takes 2 args, name of attr to validate and hash of options on how to validate
+
+eg:
+class Beer < ActiveRecord::Base
+  validates :name, presence: true
+  validates :description, presence: true
+  validates :abv, presence: true
+  validates :location, presence: true
+end
+
+Terminal: Beer.create(name: 'Delicious Beer').valid? # => true
+          Beer.create(name: nil).valid? # =>false
+
+NEW vs CREATE
+-new instatiates new AR model w/o saving it to DB
+-create immediately attempts to save it to DB, steps of NEW then SAVE
+-Trigger validation w/o touching DB bu calling valid? method
+
+
+Validation Failure
+-What to do when a record fails validation
+-Pay attention to return values
+-AR does not raise exception when validation fails, will simply return false and not update DB
+-Every DB method has sister method with ! at end which will raise an exception
+
+eg:
+class Beer < ActiveRecord::Base
+  validates :name, presence: true
+  other validations...
+end
+
+Terminal: b = Beer.new
+          b.valid? => false
+          b.save => false
+          b.save! => EXCEPTION

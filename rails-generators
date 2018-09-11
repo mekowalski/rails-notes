@@ -16,3 +16,15 @@ RAILS GENERATE
 -all Rails generators are entered as commands into terminal with syntax:
   rails generate <name of generator> <options> --no-test-framework
   or rails g (for short)
+
+MIGRATION G
+-Rails migration has great setup of conventions to help manage DB schema efficiently
+-eg: terminal command - rails g migration AddNewAttributeToBeers
+-Alter DB schema overtime, as a new 'version' of the DB
+
+
+MODEL G
+-This G is used regularly to create core code needed to create a model & associated DB table
+-eg: terminal command - rails g model Style name:string --no-test-framework
+-Creates DB migration adding a table and column(s)
+-Adds a model file that will inherit from ActiveRecord::Base

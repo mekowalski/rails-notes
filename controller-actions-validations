@@ -1,0 +1,28 @@
+Validations in Controller Actions
+-use info to help user fix typos or other issues in form submissions
+-User fills ot form and hits Submit transmitting form data via POST request
+-Controller sees validations have fails and re-renders form
+-View displays errors to the user
+
+Manually Checking Validations
+-If the object is invalid, there will be no SHOW path to redirect
+-The instance will never save to DB therefore _path will result in 404
+-If redirect, new page starts to load, losing all the feedback from validations
+
+
+Page Loads
+-full page load occudrs when form is submitted
+-all the variables set by controllers #new will disappear and are unavailable to #create
+-Rails throws everything out after each request except for the session hash
+
+eg:
+def create
+  @beer = Beer.new(beer_params)
+  if @beer.valid?
+    @beer.save
+
+    redirect_to beer_path(beer)
+  else
+    render :new //instructed to render templates from other actions
+  end
+end

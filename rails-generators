@@ -28,3 +28,13 @@ MODEL G
 -eg: terminal command - rails g model Style name:string --no-test-framework
 -Creates DB migration adding a table and column(s)
 -Adds a model file that will inherit from ActiveRecord::Base
+
+CONTROLLER G
+-Great for creating static views or nonCRUD related features
+-eg: terminal command - rails g controller BeerStyles
+-Creates controller file inheriting from ApplicationController
+-Set of routes(***if given, i didn't provide any)
+-New dir for all view templates along w/ view template file for each controller action(***)
+-View helper method file
+-Asset files of Coffescript and scss for styles both for the controller
+-This G created a large # of files that may never be used, therefore be thoughtful with controller G

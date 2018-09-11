@@ -1,0 +1,12 @@
+SCAFFOLD G
+-Not ideal for a production application but can be great reference for how to build CRUD functionality
+-Goes beyond backend functionality(migrations, controllers, resources) creating both front/back end code
+  (CRUD features)
+-Builds entire CRUD based feature without programmer writing a single line of code
+-Migration, Model files, Controller, View Templates for each controller#action, full set of RESTful routes,
+  and every other functional CRUD component
+-Not ideal because Scaffold creates so many files that can be hard to manage
+
+Scaffold can elegantly implement solution to remove dupe code
+eg: before_action :set_article, only: [:show, :edit, :update, :destroy]
+-Returns class instance variable that each controller actions will automatically have because of before_action

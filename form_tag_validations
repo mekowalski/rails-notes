@@ -1,0 +1,17 @@
+Two ways to pre-fill forms in Rails: form_tag and form_for
+-Rerender the :new template without throwing away the invalid instance
+
+eg:
+def create
+  @beer = Beer.new(beer_params)
+  if @beer.valid?
+    @beer.save
+    redirect_to beers_path(@beer)
+  else
+    render :new
+    //line 2
+  end
+end
+
+-Use invalid instance to 're-fill' the usually-empty :new form with the invalid entries to save from retyping
+-won't always want this, say with credit card #

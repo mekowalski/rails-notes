@@ -38,3 +38,19 @@ CONTROLLER G
 -View helper method file
 -Asset files of Coffescript and scss for styles both for the controller
 -This G created a large # of files that may never be used, therefore be thoughtful with controller G
+
+RESOURCE G
+-Good option for building and API, using frontend MVC framework, or simple want to manually create views
+-eg: terminal command - a few options
+     rails generate resource beer # no attributes
+     rails generate resource beer name:string description:text abv:float location:string
+     rails generate resource beerStyle name:string
+-Migration file creating new DB table for attr passed in from G
+-Model file that inherits from ActiveRecord::Base
+-Controller file that inherits from ApplicationController
+-View dir but no view template files & view helper file
+-Asset files of Coffescript and scss for styles both for the controller
+-Full resources call in the routes.rb file
+-Smart G that creates core functionality needed for full featured resource
+-resources :resourceName performs CRUD in an app
+-Automatically creates each CRUD route & makes it avialbale in controller

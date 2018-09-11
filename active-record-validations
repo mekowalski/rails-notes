@@ -49,3 +49,20 @@ Terminal: b = Beer.new
           b.valid? => false
           b.save => false
           b.save! => EXCEPTION
+
+
+CHECK WHY VALIDATIONS FAILED
+-Look at model's errors object, check all errors at once with errors.messages
+
+eg: b = Beer.new
+    b.errors.messages => empty
+    b.valid? => false
+    b.errors.messages => name: can't be blank
+
+
+CUSTOM MESSAGES
+-Not a validator but handy convenience option for specifying your own error message
+
+eg: class Beer < ActiveRecord::Base
+      validates :not_a_robot, acceptance: true, message: 'Humans only!'
+    end

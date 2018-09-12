@@ -1,0 +1,16 @@
+ActiveRecord Associations are an iconic Rails feature allowing devs to work with complex networks of related
+  -models w/o having to wtire lines of SQL, as long as names line up
+
+FOREIGN KEYS
+-Columns referring to primary key of another table, compromised of model name of reference and _id
+  eg: beers_id
+-FK's are accessible through instance methods of same name
+  eg: migration
+  class AddBeerStyleIdToBeers < ActiveRecord::Migration
+    def change
+      change_table :beers do |t|
+        t.integer :beer_styles_id
+      end
+    end
+  end
+*similar to AR query: BeerStyle.find(@beer.beer_style_id)

@@ -1,0 +1,9 @@
+CALLBACKS
+-How to take control of lifecycle of an object, nice to inject code every time AR does something to Model
+
+BEFORE_VALIDATION: called before validations occur
+
+BEFORE_SAVE: actions that need to occur that aren't modifying model itself, whenever saving to DB, send
+  -notification to user alerting that beer was just saved
+
+BEFORE_CREATE: useful getting called only when a model is created for the first time

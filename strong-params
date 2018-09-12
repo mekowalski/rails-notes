@@ -6,8 +6,8 @@ PERMIT vs REQUIRE
 Permit: is looser, means params hash may have whatever keys are in it, if it doesn't have one of the keys,
   -it's not an issue it just won't accept other keys
 
-Require: most restrictive, params that get passed in must contain a keym if not included it fails and you'll
-  -get and error
+Require: most restrictive, params that get passed in must contain a key if not included it fails and you'll
+  -get an error
 
 Keeping strong params DRY
 -with standard CRUD setup, implementation of same code is present

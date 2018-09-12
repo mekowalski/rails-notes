@@ -6,11 +6,26 @@ FOREIGN KEYS
   eg: beers_id
 -FK's are accessible through instance methods of same name
   eg: migration
-  class AddBeerStyleIdToBeers < ActiveRecord::Migration
+  class AddCompanyIdToBeers < ActiveRecord::Migration
     def change
       change_table :beers do |t|
         t.integer :beer_styles_id
       end
     end
   end
-*similar to AR query: BeerStyle.find(@beer.beer_style_id)
+*similar to AR query: Company.find(@beer.company_id)
+
+
+MANY-TO-ONE RELATIONSHIPS
+-Most common many-to-one relations are declared with belongs_to and has_many
+-BELONGS_TO: Each Beer is associated with 1 Company
+  eg:
+  class Beer < ActiveRecord::Base
+    belongs_to :company
+  end
+
+-HAS_MANY: Opposite direction where an object may be associated with 0, 1 or many instances
+  eg:
+  class Company < ActiveRecord::Base
+    has_many :beers
+  end

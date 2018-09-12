@@ -16,3 +16,6 @@ form_for: accepts instance of model as argument, uses arg to make many assumptio
 Rule of thumb for FORM_FOR
 -when form directly connects to a model
 -simple need on HTML form generated(search or contact form)
+
+-FORM_FOR: creates a form specifically for a model object
+  -automatically performs route lookup to find right URL 

@@ -29,3 +29,28 @@ MANY-TO-ONE RELATIONSHIPS
   class Company < ActiveRecord::Base
     has_many :beers
   end
+
+ActiveRecord uses Inflector to switch between singular and plural forms of models
+  NAME            DATA
+  Model           Company
+  Table           companies
+  Foreign Key     company_id
+  belongs_to      :company
+  has_many        :companies(although this would :beers in the correct AR associations)
+
+
+BUILDING NEW ITEM IN COLLECTION
+-Association macros save the day
+  eg:
+  new_beer = @company.beer.build(name: 'New Beer')
+  new_beer.save
+  *build works like new but need to save in order to persist in DB*
+
+
+SETTING SINGULAR ASSOCIATION
+-Verbose was to create this association is:
+  @beer.company = Company.new(name: 'Steamworks Brewing Co')
+  *here, @beer.company is nil until company is defined, instead it prepends with:
+  build_ then .save OR create_(DB persisted)*
+  new_company = @beer.Build_company(name: 'Steamworks Brewing Co')
+  new_company.save

@@ -54,3 +54,27 @@ SETTING SINGULAR ASSOCIATION
   build_ then .save OR create_(DB persisted)*
   new_company = @beer.Build_company(name: 'Steamworks Brewing Co')
   new_company.save
+
+
+ONE-TO-ONE RELATIONSHIPS
+Projects can become complex, therefore it's safe to give profiles their own model
+  eg:
+  -Every company would have one and only one Profile
+  -Every profile would have one and only one Company
+
+BELONGS_TO makes an appearance but instead of HAS_MANY the model is declared with HAS_ONE
+-Safe to put BELONGS_TO on whichever model has the FK in its DB table
+
+
+MANY-TO-MANY RELATIONSHIPS
+one-to-one doesn't work because something can have multiple relations
+many-to-one doesn't work because a relation can appear with other instances
+
+HAS_MANY :THROUGH
+-ideally a Company can HAS_MANY :beers
+-AND a Company can HAS_MANY :beer_styles, THROUGH: :beers
+  eg:
+  class Company
+    has_many :beers
+    has_many :beer_styles, through: :beers
+  end

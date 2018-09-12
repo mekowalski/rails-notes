@@ -1,0 +1,26 @@
+As of HTML5, forms officially do not support DELETE and PATCH for their methods
+FORM_TAG() behavior is a workaround implemented by Rails itself
+  -Use of correct rrequest methods for their corresponding goals, (GET for read, PATCH for update, etc)
+  -maintain sanity and not worry about W#C drama while writing views
+
+def destroy
+  Beer.find(params[:id]).destroy
+  redirect_to beers_path
+end
+*method chaining to immediately destroy found instance*
+
+Can either go to show page to delete instance
+Or delete from a list:
+
+/app/views/beers/index.html.erb
+
+<% beers.each do |beer| %>
+<div class='beer'>
+  <span><%= beer.name %></span>
+  <%= link_to 'DELETE', beer, method: :DELETE, data: {confirm: 'Are you sure you wan to delete?'} %>
+</div>
+<% end %>
+
+DATA-METHOD :DELETE will submit a DELETE request as if a form had been submitted
+DATA-CONFIRM pops up to confirm before link is followed, allowing user to make sure they're ready to delete
+  and instance forever

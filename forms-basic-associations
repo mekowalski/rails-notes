@@ -19,3 +19,25 @@ class Beer < ActiveRecord::Base
     self.company ? self.company.name : nil
   end
 end
+
+ -Setter method, L14,  called whenever a Beer is initialized with a company_name field
+ -Expand Beer.create(beer_params)
+
+Beer.create({
+  company_name: params[:beer][:company_name]
+  name: params[:beer][:name]
+})
+
+-setter method intercepts the call to DB and instead shadowing the attr company_name by
+  1. making sure the Company exists
+  2. providing it in-memory for the Beer model
+
+Controller Becomes simple again
+def create
+  Beer.create(beer_params)
+end
+
+private
+def beer_params
+  params.require(:beer).permit(:company_name, :name)
+end

@@ -41,3 +41,22 @@ private
 def beer_params
   params.require(:beer).permit(:company_name, :name)
 end
+
+NEW FORM
+*user can now enter company by name(instead of looking up ID)
+<%= form_for @beer do |f| %>
+  <%= f.label :company_name %>
+  <%= f.text_field :company_name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+
+
+SELECTING FROM EXISTING CATEGORIES
+-use Collection Select helper to render <select> tag, creating drop down selection to pick company
+-this way does lose ability for users to create their own company
+<%= form_for @beer do |f| %>
+  <%= f.collection_select :company_name, Company.all, :name, :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>

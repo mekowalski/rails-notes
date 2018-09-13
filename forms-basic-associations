@@ -60,3 +60,24 @@ SELECTING FROM EXISTING CATEGORIES
   <%= f.text_field :name %>
   <%= f.submit %>
 <% end %>
+
+
+FLEXIBILITY
+-ability for users to create or select existing option
+-autocompletion with datalist
+<%= form_for @beer do |f| %>
+  <%= f.text_field :company_name, list: "companies_autocomplete" %>
+  <datalist id="companies_autocomplete">
+    <% Company.all.each do |company| %>
+      <option value="<%= company.name %>">
+    <% end %>
+  </datalist>
+  <textarea name="beer[name]"></textarea>
+  <%= f.submit %>
+<% end %>
+
+
+UPDATING MULTIPLE ROWS
+-how to let user specify may different beers to arrange
+-Use array params
+*i'm getting a bit lost/confused with all these AR associations!*

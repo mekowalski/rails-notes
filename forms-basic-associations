@@ -1,0 +1,21 @@
+Using the model ID
+-Rewrite controller to accept a company_name/beer_style_name instead of ID
+  eg:
+  class BeersController < ApplicationController
+    def create
+      company = Company.find_or_create_by(name: params[:beer][company_name])
+      Beer.create(name: params[:beer][:name], company: company)
+    end
+  end
+^^^this will have to be anywhere for setting the company for a Beer, move logic to the model
+
+app/models/beer.rb
+class Beer < ActiveRecord::Base
+  def company_name=(name)
+    self.company = Company.find_or_create_by(name: name)
+  end
+
+  def company_name
+    self.company ? self.company.name : nil
+  end
+end

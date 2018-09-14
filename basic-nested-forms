@@ -1,0 +1,10 @@
+Data Model
+Rails will take over the concept of nested attributes
+-Use of accepts_nested_attributes_for and fields_for FromHelper
+class Company < ActiveRecord::Base
+  has_many :beers
+  accepts_nested_attributes_for :beers
+end
+
+-accepts_nested_attributes_for writes a setter method of beers_attributes= to create both Company object
+ and 2 Beer objects

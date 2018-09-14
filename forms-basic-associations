@@ -51,7 +51,7 @@ NEW FORM
   <%= f.submit %>
 <% end %>
 
-
+*this is how i will associate Company and BeerStyle with Beer, beer initialization*
 SELECTING FROM EXISTING CATEGORIES
 -use Collection Select helper to render <select> tag, creating drop down selection to pick company
 -this way does lose ability for users to create their own company
@@ -80,4 +80,34 @@ FLEXIBILITY
 UPDATING MULTIPLE ROWS
 -how to let user specify may different beers to arrange
 -Use array params
-*i'm getting a bit lost/confused with all these AR associations!*
+-Rails uses naming convention to submit an array of values to a controller
+-When submitted, controller will have access to a beer_ids param, which is an array of strings
+<%= form_for @company do |f| %>
+  <input name="company[beer_ids][]">
+  <input name="company[beer_ids][]">
+  <input name="company[beer_ids][]">
+  <input type="submit" value="Submit">
+<% end %>
+
+-Write a setter_method just like company_name
+class Company < ActiveRecord::Base
+   def beer_ids=(ids)
+     ids.each do |id|
+       beer = Beer.find(id)
+       self.beers << beer
+     end
+   end
+end
+
+-Use same wiring in controller to set beer_ids from params
+class CompaniesController < ApplicationController
+  def create
+    Company.create(company_params)
+  end
+
+  private
+
+  def company_params
+    params.require(:company).permit(:name, beer_ids: [])
+  end
+end

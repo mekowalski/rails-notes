@@ -19,3 +19,16 @@ end
 
 -accepts_nested_attributes_for writes a setter method of beers_attributes= to create both Company object
  and 2 Beer objects
+
+
+FIELDS_FOR
+-create a params hash, gives nice, easy to read lines of code
+
+
+CREATING STUBS
+-when creating class in controller, add empty beers to fill out
+def new
+  @company = Company.new
+  @company.beers.build <--- empty filed for beer to fill out
+end
+*L32: in the browser the form with fields and its attributes are present

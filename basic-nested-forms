@@ -32,3 +32,11 @@ def new
   @company.beers.build <--- empty filed for beer to fill out
 end
 *L32: in the browser the form with fields and its attributes are present
+*This doesn't work yet, need to modify _params in private
+
+
+AVOIDING DUPLICATES
+-Can't use accepts_nested_attributes_for when wanting to avoid duplicates
+-If wanted to create company while creating beers, need find_or_create_by in company_attributes=(company)
+setter method
+-Providing no matching company and allowing creation of new company

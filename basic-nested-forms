@@ -1,6 +1,17 @@
 Data Model
 Rails will take over the concept of nested attributes
 -Use of accepts_nested_attributes_for and fields_for FromHelper
+Company
+  -has_many beers
+  -has a name(string)
+
+Beer
+  -belongs_to(has one) company
+  -has a name(string)
+  -has a description(text)
+  -has an abv(float)
+  -has a location(string)
+
 class Company < ActiveRecord::Base
   has_many :beers
   accepts_nested_attributes_for :beers

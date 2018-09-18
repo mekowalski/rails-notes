@@ -40,3 +40,7 @@ AVOIDING DUPLICATES
 -If wanted to create company while creating beers, need find_or_create_by in company_attributes=(company)
 setter method
 -Providing no matching company and allowing creation of new company
+
+
+NESTED FORM
+-form that allows you to deal with creation of a different model

@@ -49,3 +49,11 @@ NESTED FORM
 Methods that come along with relationships
 @instance.build_class :method when a model belongs_to another model
 @instance.classes.build :method for when a model has_many instances of a model
+
+Setter
+-pass in what the relationship is.
+-since Beer belongs_to a single Company then accepts for singular
+accepts_nested_attributes_for :company
+
+-if Beer has_many Companies then accepts for plural
+accepts_nested_attributes_for :companies

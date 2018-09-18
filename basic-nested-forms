@@ -44,3 +44,8 @@ setter method
 
 NESTED FORM
 -form that allows you to deal with creation of a different model
+-synonymous with fields_for
+
+Methods that come along with relationships
+@instance.build_class :method when a model belongs_to another model
+@instance.classes.build :method for when a model has_many instances of a model

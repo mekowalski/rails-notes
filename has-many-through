@@ -2,3 +2,5 @@ Often used to set up many-to-many connection with another model
 -declaring model can be match with 0 or more instances of another model
 eg:
   Company has_many BeerStyles through Beers
+
+***this one i'm not getting yet***

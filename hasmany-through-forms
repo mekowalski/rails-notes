@@ -1,0 +1,5 @@
+JOIN MODEL FORMS
+-When filling out a form, given the option to choose from a dropdown and this assigns properties directly to
+ the new instance created
+-Other times abstraction is needed
+ eg: a beer_style has many companies and a company has many beer_styles

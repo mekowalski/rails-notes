@@ -3,3 +3,29 @@ JOIN MODEL FORMS
  the new instance created
 -Other times abstraction is needed
  eg: a beer_style has many companies and a company has many beer_styles
+ ^^^create join table called: beer_style_companies(this doesn't make sense to me)
+
+
+SETTING UP BEERSTYLES AND COMPANIES
+eg:
+class BeerStyle < ActiveRecord::Base
+  has_many :beer_style_companies
+  has_many :companies, through: :beer_style_companies
+end
+
+class Company < ActiveRecord::Base
+  has_many :beer_style_companies
+  has_many :beer_styles, through: :beer_style_companies
+end
+
+class BeerStyleCompany < ActiveRecord::Base
+  belongs_to :beer_style
+  belongs_to :company
+end
+
+-This helps assign companies to a beer style with created
+-With previous example WITHOUT join table, a foreign key was assigned
+
+***see this is where i don't think it works. my beer model has 2 foreign keys of beer style and company. the
+latter 2 models do not have any foreign keys. it doesn't makes sense for beer to have many beer styles but
+beer styles may have many individual beers***

@@ -29,3 +29,13 @@ end
 ***see this is where i don't think it works. my beer model has 2 foreign keys of beer style and company. the
 latter 2 models do not have any foreign keys. it doesn't makes sense for beer to have many beer styles but
 beer styles may have many individual beers***
+
+-With the instance of this join table, the class responds to a method called model_name_ids= which is called
+ from form helpers to build nested form
+-has many through functions exactly the same as has many relationship
+-controller would have a _params action with _ids of array value
+
+def beer_params
+  params.require(:beer).permit(beer attributes,
+  whatever_ids: [])
+end

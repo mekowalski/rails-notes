@@ -47,4 +47,6 @@ CREATING A NEW INSTANCE
 -when an option in collection is not present
 -Text field to enter name of new instance, value should be nested under _params, to not add too much code to
  controller, use fields_for to implement
-eg:
+
+
+***not finishing this and moving on for now. can't keep being stuck here, i will come back to it***

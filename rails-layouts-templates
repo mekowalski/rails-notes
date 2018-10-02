@@ -13,4 +13,27 @@ LAYOUTS TO THE RESCUE
 
 YIELD
 -code new layout from scratch with doctyle html, html, head and body
--
+-when layout is rendered, it pulls action's specific template into the correct place, where YIELD is added
+
+HOW LAYOUTS/TEMPLATES ARE STITCHED TOGETHER
+1. Rails finds template for corresponding action based on convention or other options passed to 'render'
+   method in controller#action
+2. Finds correct layout to use, through naming/dir or specific options provided
+3. Rails used action template to generate content specific to action
+4. Looks for layout's YIELD statement and insert action's template there
+
+HOW RAILS DECIDES WHICH LAYOUT TO USE
+-Rails uses simple convention to find correct layout for request
+-controller name helps select correct layout, if not layout isn't specific to controller it will default to
+ app/views/layouts/application.html.erb (this is default in rails g)
+-Most applications use default layout therefore it's not necessary to have layout for each con
+
+OVERRIDING CONVENTIONS
+-If need for using a specific layout for every action, simply specify using that layout in the 'layout'
+ method in controller
+eg:
+  class BeersController < ApplicationController
+    layout 'beers' --->beers would be a file name of the specific layout
+  end
+
+-Unusual to not render layout in standard action BUT common once AJAX(JS) is used

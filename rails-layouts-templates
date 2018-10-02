@@ -8,3 +8,9 @@ LIFE WITHOUT LAYOUTS
 
 
 LAYOUTS TO THE RESCUE
+-Rails layouts are enabled by default when generating new Rails app
+---> in beer-log app: app/views/layouts/application.html.erb
+
+YIELD
+-code new layout from scratch with doctyle html, html, head and body
+-

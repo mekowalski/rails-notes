@@ -1,0 +1,8 @@
+PARTIALS
+-View level files that only form one part of HTML page
+-Helps to DRY code and add better organization to code in views
+-Duplication is twice the amount of code to maintain, twice opportunities for bugs and non-consistent
+ interface with forms
+
+1. Create file in app/views/beers/ called _form.html.erb
+   *see app/views/beers*

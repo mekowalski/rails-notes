@@ -8,3 +8,4 @@ PARTIALS
    *see app/views/beers*
 2. Remove(copy) dupe code from both new and edit form files
 3. Paste dupe code into _form.html.erb
+4. new and edit should have render 'form'

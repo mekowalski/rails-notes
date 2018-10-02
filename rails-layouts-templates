@@ -1,0 +1,10 @@
+LIFE WITHOUT LAYOUTS
+-Across all views, the look should be consistent, perhaps with logo, nav links, search bar, footer
+-You can begin your layout with an action template, but this will be copied across all views
+-this is not DRY!!!
+
+-If you need to change part of a template, you'll have to change it multiple times in multiple files
+(not thank you)
+
+
+LAYOUTS TO THE RESCUE

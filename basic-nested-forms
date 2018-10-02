@@ -21,8 +21,11 @@ end
  and 2 Beer objects
 
 
-FIELDS_FOR
+FIELDS_FOR (update with rails nested forms deep dive 100218)
 -create a params hash, gives nice, easy to read lines of code
+-no symantic/sturctural difference of a hash when it could be an array
+-fields_for provides 2 yields, i: the amount of instance you're making AND
+  the nested attributes
 
 
 CREATING STUBS

@@ -18,4 +18,14 @@ Rule of thumb for FORM_FOR
 -simple need on HTML form generated(search or contact form)
 
 -FORM_FOR: creates a form specifically for a model object
-  -automatically performs route lookup to find right URL 
+  -automatically performs route lookup to find right URL
+
+
+UPDATE WITH RAILS NESTED FORMS DEEP DIVE
+-form_for is a macro for Rails, #new, to give form an ActiveRecord instance to wrap around
+-FormBuilder Object: knows about the instance of AR its attached to
+-They are attached to the underlying object
+<%= form_for(@beer) do |f| %>
+
+ <%= f.submit %>
+<% end %>

@@ -6,3 +6,5 @@ PARTIALS
 
 1. Create file in app/views/beers/ called _form.html.erb
    *see app/views/beers*
+2. Remove(copy) dupe code from both new and edit form files
+3. Paste dupe code into _form.html.erb

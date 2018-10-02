@@ -42,7 +42,7 @@ setter method
 -Providing no matching company and allowing creation of new company
 
 
-NESTED FORM
+NESTED FORM (this answers my question from beer log notes 100218)
 -form that allows you to deal with creation of a different model
 -synonymous with fields_for
 

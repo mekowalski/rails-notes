@@ -11,6 +11,8 @@ form_tag: helper method allows automatic generation of HTML and data integration
 form_for: accepts instance of model as argument, uses arg to make many assumptions
   -yields an object class FormBuilder
   -automatically knows standard route for form data following RESTful convention
+  (RESTful routes is very pattern oriented: new, create, index, show, edit, update, destroy
+  I should be able to do this without hesitation)
   -gives option to dynamically change submit button text
 
 Rule of thumb for FORM_FOR
@@ -25,7 +27,11 @@ UPDATE WITH RAILS NESTED FORMS DEEP DIVE
 -form_for is a macro for Rails, #new, to give form an ActiveRecord instance to wrap around
 -FormBuilder Object: knows about the instance of AR its attached to
 -They are attached to the underlying object
-<%= form_for(@beer) do |f| %>
 
- <%= f.submit %>
+beer#new AND beer#create
+<%= form_for(@beer) do |f| %>
+  <%= f.label : name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
 <% end %>

@@ -9,3 +9,8 @@ PARTIALS
 2. Remove(copy) dupe code from both new and edit form files
 3. Paste dupe code into _form.html.erb
 4. new and edit should have render 'form'
+
+THINGS TO NOTE
+1. duplicate code with <% end %> in new and edit form and not moved into the partial
+  ^^^this did not work for me. i had to include <% end %> in my partial. i want to think it's because i have
+  a form_for and not a form_tag, which lesson states is the case

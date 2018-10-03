@@ -1,0 +1,16 @@
+-Partials allow breaking up code into reusable parts, this can often lead to implicit dependencies which
+ lead to bugs
+
+-When rendering a partial from a different DIR, dependencies aren't explicitly noted
+-Dependency: data the code requires in order to work(like passing variable to method)
+-In application case, dependency is the instance @variable, located far away in controller
+-If removing an out-of-DIR partial, the instance also needs to be removed
+
+BEGIN
+1. <%= render 'otherdir/partial' %>
+
+REFACTOR
+2. <%= render partial: 'otherdir/partial', locals: {beer_style: @beer_style} %>
+
+-No longer passing render method a string, passing a hash with key-pair value
+-First kp value contains key of locals pointing to has of variables to pass into the partial

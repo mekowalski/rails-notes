@@ -14,3 +14,12 @@ HELPERS
 -Helpers are generally organized by controller
   With rails g scaffold OR rails g controller, app/helpers is provided
 -More advanced, encapsulating more logic and even HTML
+
+-Helpers are organized by controller but aren't restricted to a single controller, similar to link_to in any
+ view
+
+
+APPLICATION HELPERS
+-application_helper is created automatically with Rails project that is related to app itself rather than
+ any given model/controller
+-Not concerning a single controller and applicable to entire application 

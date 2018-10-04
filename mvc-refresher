@@ -5,3 +5,16 @@ MVC: created as general purpose solution designed to bridge gap between user's m
 VIEW: interface a user would interact with, what they read, click, hear, what flashes at them, etc
 MODEL: actual data resides and is altered
 CONTROLLER: manages communication between model and view, takes model info and preps for view and vice versa
+
+1. User interacts with view, requests data
+2. Request is sent across internet to server
+3. Controller asks model to either provide data or alter model held data
+4. Model accesses/manipulates actual 1's & 0's held on server's DB and returns desired result to controller
+5. Controller packs response and sends it back to client
+6. View presents the data to user
+
+MVC DESIGN PURPOSE
+-Language and application agnostic
+-Modular: every part is distinct, encapsulated and can be replaced w/o breaking remaining application
+-Use controller to facilitate communication between model and view
+-Stores 'truth', actual data in model, which is abstracted & independent from its representation in view

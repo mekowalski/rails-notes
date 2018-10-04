@@ -22,4 +22,4 @@ HELPERS
 APPLICATION HELPERS
 -application_helper is created automatically with Rails project that is related to app itself rather than
  any given model/controller
--Not concerning a single controller and applicable to entire application 
+-Not concerning a single controller and applicable to entire application

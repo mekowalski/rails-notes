@@ -1,0 +1,7 @@
+MVC: created as general purpose solution designed to bridge gap between user's mental model and computer's
+     actual implementation
+     -Helps separate concerns
+
+VIEW: interface a user would interact with, what they read, click, hear, what flashes at them, etc
+MODEL: actual data resides and is altered
+CONTROLLER: manages communication between model and view, takes model info and preps for view and vice versa

@@ -8,3 +8,9 @@ Opposite of DRY is WET: Write Everything Twice
 
 
 HELPERS
+-Common methods available to views encapsulating common bit of code
+ eg: link_to, text_field and text_area are all helpers
+-Can also create custom helpers to solve our own issues
+-Helpers are generally organized by controller
+  With rails g scaffold OR rails g controller, app/helpers is provided
+-More advanced, encapsulating more logic and even HTML

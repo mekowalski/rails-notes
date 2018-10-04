@@ -18,3 +18,7 @@ MVC DESIGN PURPOSE
 -Modular: every part is distinct, encapsulated and can be replaced w/o breaking remaining application
 -Use controller to facilitate communication between model and view
 -Stores 'truth', actual data in model, which is abstracted & independent from its representation in view
+
+-Rails takes architectural guidance on how to separate concerns from the MVC pattern
+-Rails implementation isn't completely texbook ideal but that's okay
+-Each pillar has purpose that programmers can reasonably agree/disagree upon

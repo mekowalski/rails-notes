@@ -10,3 +10,10 @@ DYNAMIC ROUTE SEGMENTS
 
 -To handle new filtering routes, create actions to do the work
 *see beer_style_controller*
+
+Currently
+-Controller action would normally render template with same name as method, in this case leveraging templates
+ already used
+-routes.rb is already messy
+  1. Specifying controller#actions and HTTP verbs instead of using resources :models
+  2. Not DRY and no Separation of Concerns(SOC), beerstyles_controller isn't responsible for concerns

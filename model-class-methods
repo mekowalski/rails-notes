@@ -24,3 +24,5 @@ Refactoring out of the View
 
 -To achieve correction:
   1. Kill/Remove/Delete Filer logic from beers/index.html.erb
+  2. View shouldn't directly query DB for model association of BeerStyle
+  3. The Controller should provide all the data needed

@@ -17,3 +17,13 @@ Currently
 -routes.rb is already messy
   1. Specifying controller#actions and HTTP verbs instead of using resources :models
   2. Not DRY and no Separation of Concerns(SOC), beerstyles_controller isn't responsible for concerns
+
+
+NESTED RESOURCE ROUTES
+-Rails provides a way to make this all nicer
+-In the models
+  a beer_style has_many :beers
+  a beer belongs_to :beer_style
+-Beer can be logically considered a child obj to a BeerStyle, therefore it can also be a nested resource of
+ a BeerStyle for routing purposes
+*see routes.rb*

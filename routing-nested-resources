@@ -7,3 +7,6 @@ DYNAMIC ROUTE SEGMENTS
 -Build route with dynamic segments defined in routes.rb
  eg: /beerstyle/1/beers/3
  *see routes.rb*
+
+-To handle new filtering routes, create actions to do the work
+*see beer_style_controller*

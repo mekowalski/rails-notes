@@ -38,3 +38,6 @@ REFACTORING DATABASE LOGIC OUT OF CONTROLLER
  class method is used
 
 -Correction:
+  *see beer.rb*
+  1. Add BeerStyle filter into Beer model
+  2. This is similar code to beers#index, change action to use by_beer_style method

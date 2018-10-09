@@ -1,3 +1,13 @@
 Filter by certain attributes
 -Add controls to the view to manage filter
 *see beers/index.html.erb*
+-At this point, form is present in browser view but nothing occurs when an instance is selected and Filter is
+ clicked
+
+-Take action and write code to do filtering
+*beers/index.html.erb at top*
+ <% if !params[:beer].blank? %>
+   <% @beers = Beer.where(beer_style: params[:beer_style]) %>
+ <% end %>
+
+^^^this is not helpful at all for me. i don't know why i'm using this

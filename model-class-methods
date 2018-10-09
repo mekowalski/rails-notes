@@ -14,7 +14,7 @@ Filter by certain attributes
 ^^^scratch that, it is actually working, it's the partial that i'm not in love with
 
 
-Refactoring out of the View
+REFACTORING OUT OF THE VIEW
 -In MVC separation of concerns, put the code in the right place
 -Currently, the beers#index view is cluttered with so much business logic
 -Current red flags
@@ -22,7 +22,19 @@ Refactoring out of the View
   2. View reads params which is out of the way to allow from controller
   3. View overrides @beers, which controller is already creating, doubling the DB requests
 
--To achieve correction:
+-Correction:
   1. Kill/Remove/Delete Filer logic from beers/index.html.erb
   2. View shouldn't directly query DB for model association of BeerStyle
   3. The Controller should provide all the data needed
+
+
+REFACTORING DATABASE LOGIC OUT OF CONTROLLER
+-Controller should not care about deep knowledge of DB to make direct queries
+-Controller should care about asking model for what it needs in the simplest way
+
+-Move separation of concerns into the Model
+-Is this a class method on Beer model itself or instance method on specific beer?
+-Since the query is for multiple beer instances from DB, there won't be an instance to begin with therefore
+ class method is used
+
+-Correction:

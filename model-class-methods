@@ -11,3 +11,16 @@ Filter by certain attributes
  <% end %>
 
 ^^^this is not helpful at all for me. i don't know why i'm using this
+^^^scratch that, it is actually working, it's the partial that i'm not in love with
+
+
+Refactoring out of the View
+-In MVC separation of concerns, put the code in the right place
+-Currently, the beers#index view is cluttered with so much business logic
+-Current red flags
+  1. View directly queries DB for beers AND beer_styles
+  2. View reads params which is out of the way to allow from controller
+  3. View overrides @beers, which controller is already creating, doubling the DB requests
+
+-To achieve correction:
+  1. Kill/Remove/Delete Filer logic from beers/index.html.erb

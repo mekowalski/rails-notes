@@ -1,0 +1,9 @@
+REST: REpresentational State Transfer, encapsulates a way of structuring a URL for access to specific resource
+      is predictable
+
+-It's a clean approach to display for URL
+
+DYNAMIC ROUTE SEGMENTS
+-Build route with dynamic segments defined in routes.rb
+ eg: /beerstyle/1/beers/3
+ *see routes.rb*

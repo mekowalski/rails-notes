@@ -41,3 +41,8 @@ REFACTORING DATABASE LOGIC OUT OF CONTROLLER
   *see beer.rb*
   1. Add BeerStyle filter into Beer model
   2. This is similar code to beers#index, change action to use by_beer_style method
+
+-Could use find method to return beer by beerstyles
+-When constructing and application in logical way, use Separation of Concern principles to guide creating
+-Conclude that Controller is concerned with Model therefore almost everything in Con probably flows through
+ that Model

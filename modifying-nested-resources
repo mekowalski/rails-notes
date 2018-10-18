@@ -3,3 +3,8 @@ Create new beer that is automatically linked to a Company
 -Nested resources in routes
 -Give access to /companies/:id/beers/new and a new_company_beer_path helper
  *rake routes for URL helper name*
+
+Modify nested resource
+  *refer to beers app*
+  1. Update beers#new to handle :company_id parameter
+  2. Modify companies/show with link_to nested new beer

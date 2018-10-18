@@ -1,0 +1,5 @@
+Create new beer that is automatically linked to a Company
+-When on the Company's page, user should have the option to build new beer associated with that company
+-Nested resources in routes
+-Give access to /companies/:id/beers/new and a new_company_beer_path helper
+ *rake routes for URL helper name*

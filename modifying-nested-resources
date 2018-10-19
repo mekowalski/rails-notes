@@ -8,3 +8,14 @@ Modify nested resource
   *refer to beers app*
   1. Update beers#new to handle :company_id parameter
   2. Modify companies/show with link_to nested new beer
+
+
+HANDLING MISCHIEF AND ERRORS IN URLs
+-Open up potential bugs, opportunites for playful users to mess up data(via edit)
+*i didn't include the edit nesting only new*
+-Check and make sure(#edit) that:
+  1. the foreign_key_id is valid
+  2. the instance matches the correct parent (beer(18) matches parent company(3))
+
+-check existence of params[:foreign_key_id] to know it comes from nested routes
+-if the parent is not present then flash alert 

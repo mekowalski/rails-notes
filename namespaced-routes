@@ -1,0 +1,5 @@
+Scoping Routes
+-Eventually, with direct routes that are grouped, the code becomes repetitive
+-If specified routes need to be grouped under /thisgroup, Scope helps
+-Scope: allows prefixing a block of routes under one grouping
+*i don't have a legitimate use of this in my application but i will still provide examples*

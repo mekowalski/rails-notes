@@ -3,3 +3,14 @@ Scoping Routes
 -If specified routes need to be grouped under /thisgroup, Scope helps
 -Scope: allows prefixing a block of routes under one grouping
 *i don't have a legitimate use of this in my application but i will still provide examples*
+
+eg: routes.rb
+  scope '/admin' do
+    resources :stats, only: [:index]
+  end
+
+-can reload /admin/stats and this will work correctly
+-new route is resources therefore don't have to manually '/admin'
+-rake routes will provide new /admin/stats and helpers _url and _path
+
+SCOPING WITH MODULES

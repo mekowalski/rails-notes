@@ -14,3 +14,32 @@ eg: routes.rb
 -rake routes will provide new /admin/stats and helpers _url and _path
 
 SCOPING WITH MODULES
+-Works with grouping URLs together logically
+-As app grows, controllers are difficult to track which controllers are for regular functions
+-Ideally, creating a controller folder to hold all the parent nesting actions
+
+eg: mkdir app/controllers/admin
+  1. move stats_controller.rb to /admin folder
+
+-When new folder is created under /controllers, Rails will automatically pick it up as a Module and expect
+ namespacing of the controller respectively
+eg:
+class Admin::StatsController < ApplicationController
+  def index
+    code
+    code
+    ...
+  end
+end
+
+-Make certain the views match
+  1. Create view folder
+  2. Move respective view into folder
+
+-Need to tell routes about new module
+-Tell schope to use /admin as URL prefix
+-Let Rails know all the routes handled by controller in admin module
+eg: routes.rb
+  scope '/admin', module: 'admin' do
+    resources :stats, only: [:index]
+  end

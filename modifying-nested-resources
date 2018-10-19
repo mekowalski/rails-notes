@@ -18,4 +18,15 @@ HANDLING MISCHIEF AND ERRORS IN URLs
   2. the instance matches the correct parent (beer(18) matches parent company(3))
 
 -check existence of params[:foreign_key_id] to know it comes from nested routes
--if the parent is not present then flash alert 
+-if the parent is not present then flash alert
+
+-Once parent is valid, check:
+  1. the correct child instance filtering query through parent.children collection
+  *this may have valid :id but it may not belong to the parent which makes it invalid
+
+-Also check #new of:
+  1. foreign_key_id and that it .exists? to make sure it's real
+  2. if return is nil then
+  3. modify form_for to present a list of parents when none is present
+-gives select control but the logic would become greater code and would clutter view
+-therefore the children_helper helps clean up the form

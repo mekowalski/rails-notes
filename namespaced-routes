@@ -43,3 +43,18 @@ eg: routes.rb
   scope '/admin', module: 'admin' do
     resources :stats, only: [:index]
   end
+
+NAMESPACE
+-With scoping, route isn't as DRY
+-Namespace: Rails provides a shortcut when using a module AND use of that module's name as URL prefix
+eg: routes.rb
+  namespace :admin do
+    resources :stats, only: [:index]
+  end
+
+-Namespace method makes assumption that the path prefix and module name match
+
+Scope: provides _path helper
+Namespace: helper is prefixed (admin_)
+
+-When switching from scope to namespace, update any URL helpers in use

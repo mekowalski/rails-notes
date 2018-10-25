@@ -1,4 +1,20 @@
+SECURITY CONCEPTS
+-applied in physical and digital worlds
 Identification: Who you claim to be
 Authentication: Validation that you are who you claim to be and roles associated based on your identity
 Access Policy: What roles are allowed to do
 Authorization: Mechanisms to enforce Access Policy
+
+AUTHENTICATION AND AUTHORIZATION FLOW
+eg: local bank branch
+  1. Stating your name and show ID (Identification)
+  2. Verify identity claim with a password, matching signature, etc (Authentication)
+    -At this point, the bank knows they are working with a verified entity
+  3. Proceed to withdraw from the account (Access Policy)
+  4. Owner of account permitted to withdraw (Authorization)
+
+eg: online bank account
+  1. Enter username (Identify)
+  2. Enter password to provide proof or your identity claim (Authentication)
+  3. Granted certain privileges (Access Policy)
+  4. Bank has checkpoints to enforce Access Policy and provides you with permitted activity (Authorization)

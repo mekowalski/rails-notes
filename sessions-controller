@@ -7,9 +7,26 @@ Wristband Pattern
 -If you buy a drink, the bartender doesn't ask for ID, they'll look at your wristband
 -Wristband proves you are legal drinking age
 
-LOGIN INS SYSTEM IN RAILS
+LOGIN SYSTEM FLOW IN RAILS
   1. user GETs /login
   2. user enters username, no password
   3. user submits form POSTing to /login
   4. sessions#create sets a cookie on user's browser by writing username into session hash
   5. the user is logged in, session[:username] holds their username
+
+SessionsController and routes mapping
+
+class SessionsController < ApplicationController
+  def new
+    #nothing to do here
+  end
+
+  def create
+    session[:username] = params[:username]
+    redirect_to '/'
+  end
+end
+
+routes.rb
+get '/login'
+post '/login'

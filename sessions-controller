@@ -30,3 +30,23 @@ end
 routes.rb
 get '/login'
 post '/login'
+
+-Currently no way to log out, you'll have to delete cookie from browser
+-make small login for in new.html.erb
+  <form method='post'>
+    <input name='username'>
+    <input type='submit' value='login'>
+  </form>
+
+-Usually form_for @user would be created but User model isn't created
+
+LOGGING OUT
+-Logout flow is even simpler
+-add a #destroy action to clear username out of session
+  def destroy
+    session.delete :username
+  end
+
+-common route is to post '/logout' meaning logout link is a submit button that is styled to look like a link
+-GET attachment doesn't change anything, logging out DOES change something therefore POST is used for change
+-don't want to have a URL of http://www.yoursite.com/logout

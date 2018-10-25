@@ -40,3 +40,53 @@ SECURITY CONCERNS
 -In Chrome console (inspect tool), users may decide to delete/alter cookies
   *i can go to my github account, delete the cookie from Chrome console and i'd be logged out of Github*
 -Arising issue is that a user may be able to see other accounts
+
+RAILS TO THE RESCUE
+-When cookies are set in Rails, manipulation doesn't occur with HTTP headers directly
+-Sessions method available anywhere in Rails response cycle and behaves like a hash
+eg:
+  -set list_id
+  session[:list_id] = @list.id
+
+  -load list reference in session
+  @list = session[:list_id]
+
+-Can store any simple Ruby object in session
+-Rails namages all session data in a single cookie named: _YOUR_RAILS_APP_NAME_session
+  -serializes all key/pair values with session, converting them from Ruby object to a big string
+  -with key/value set, Tails updates value of its session to a big string
+
+-Rails signs the set cookies to prevent users from tampering them in config/secrets.yml
+  *i can't find this in my config unfortunately. i have many other .yml files*
+-Rails creates a signature for every cookie it sets and appends signature to the cookie preventing cookie
+ tampering
+
+TYING IT TOGETHER
+-controller may have a method in which the user will add an item to a list
+  def add_to_list
+    // get item from the path
+    @item = Item.find(params[:id])
+
+    //load list from the session ore create a new empty list
+    list = session[:list] || []
+    list << @item.id
+
+    //save the list in the session
+    session[:list] = list
+  end
+
+-also common to wrap this in a helper method
+-can be used in views and layouts
+  class ApplicationController < ActionController::Base
+    helper_method :current_list
+
+    def current_list
+      session[:list] || = []
+    end
+  end
+
+-refactored controller
+  def add_to_list
+    @item = Item.find(params[:id])
+    current_list < @item.id
+  end

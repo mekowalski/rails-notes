@@ -15,3 +15,13 @@ eg: request flow
     1. HTTP verb : get, post, put
     2. a path
     3. various headers
+
+-HTTP servers commonly stateless, receive, process and return request of data
+-GET requests usually encodes info in the patch
+  eg: /lists/:list_id
+  -Telling Rails to pull value id from request path and save it in params[:id] in controller
+
+  def show
+    @list = List.find(params[:list_id])
+  end
+  -this then loads that list from the DB and returns it as AR model object for views rendered

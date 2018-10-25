@@ -1,0 +1,4 @@
+Cookies: HTTP server asking browser to store a bit of data and retrieve that data later
+  -Used for login, providing way to verify user once and remembering for the entire session
+  -Without cookies, providing login information is needed for every server request
+  -May also store other info such as shopping cart items, what ads have been shown

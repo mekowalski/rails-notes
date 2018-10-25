@@ -25,3 +25,18 @@ eg: request flow
     @list = List.find(params[:list_id])
   end
   -this then loads that list from the DB and returns it as AR model object for views rendered
+
+-Cookies are stored in browser, browser doesn't care about what's in the cookies
+-Browsers store data and sends along info on future requests to server
+
+USING COOKIES
+-To store a reference of a User, create the instance then in response include:
+  ==Server -> User Agent ==
+  Set-Cookie: list_id=369
+  -Can look at this HTTP header, get list_id and look it up using AR .find method
+
+SECURITY CONCERNS
+-Cookies are stored in plain text in browser
+-In Chrome console (inspect tool), users may decide to delete/alter cookies
+  *i can go to my github account, delete the cookie from Chrome console and i'd be logged out of Github*
+-Arising issue is that a user may be able to see other accounts

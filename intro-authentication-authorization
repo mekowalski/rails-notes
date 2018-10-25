@@ -1,0 +1,4 @@
+Identification: Who you claim to be
+Authentication: Validation that you are who you claim to be and roles associated based on your identity
+Access Policy: What roles are allowed to do
+Authorization: Mechanisms to enforce Access Policy

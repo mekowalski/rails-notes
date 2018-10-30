@@ -1,0 +1,16 @@
+MANUAL CHECKS
+-From technical perspective, what does a user login actually mean?
+-When a user logs in, their cookies are added to their user_id in their session
+-User specifications should be present to them only(name, uploads, recent additions, etc)
+
+eg: beer example, beers#show
+
+def show
+  @beer = Beer.find(params[:])
+end
+
+NEW REQUIREMENT FOR WHEN A USER LOGS IN
+def show
+  return head(:forbidden) unless session.include? :user_id
+  @beer = Beer.find(params[:id])
+end

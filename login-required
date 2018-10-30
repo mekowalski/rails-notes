@@ -14,3 +14,10 @@ def show
   return head(:forbidden) unless session.include? :user_id
   @beer = Beer.find(params[:id])
 end
+
+L14: return guard returning an error if the session doesn't include :user_id
+L14: head(:forbidden) controller method returning specified HTTP status code, 403 forbidden
+
+-Return guard works well and may be considered in all actions but that isn't DRY code
+-Rails provides solution of before_action, which is a filter that runs before, after or around a controller's
+ action(this runs before the action)

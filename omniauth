@@ -20,3 +20,10 @@ How OmniAuth works from User's standpoint
      to access user info
   5. If user agrees, they're redirected to /auth/google/callback and from there to the initial page they
      tried to access
+
+OMNIAUTH WITH GOOGLE
+-OAuth allows use of OAuth protocol with a number of many providers, only need to add OmniAuth gem and
+ provider specific OAuth gem to gemfile(omniauth and omniauth-google)
+-Run bundle install to update Gemfile
+-Tell OAuth about app's OAuth credentials, creating a file named config/initializers/omniauth.rb
+*refer to authentication branch of beer-log app*

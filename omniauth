@@ -1,0 +1,5 @@
+-Passwords are terrible for a few reasons
+  1. You have to remember them, or user a pw manager
+  2. On the server, all the passwords have to be managed
+  3. Server-stored pws are not secure
+  4. Manage pw changes, email verification and pw recovery

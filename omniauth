@@ -3,3 +3,20 @@
   2. On the server, all the passwords have to be managed
   3. Server-stored pws are not secure
   4. Manage pw changes, email verification and pw recovery
+
+-If this was another entity's problem:
+(Github, Facebook, Google, etc)
+-The location in the world, the operating system being run, and numerous factors are being considered when
+ being logged in via third party
+
+OMNIAUTH
+-Gem for Rails that allows use of multiple authentication providers alongside traditional username/pw setup
+
+How OmniAuth works from User's standpoint
+  1. User is redirected to a login page from yoursite.com
+  2. Login page offers creating an account or login via Google or Twitter
+  3. User clicks Login with Google, will briefly send user to /auth/google redirect for Google login page
+  4. If user isn't already Google signed-in, they'll sign in and Google asks permission for yoursite.com
+     to access user info
+  5. If user agrees, they're redirected to /auth/google/callback and from there to the initial page they
+     tried to access

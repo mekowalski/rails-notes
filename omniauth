@@ -43,3 +43,11 @@ ENV
    (my provider is google, yours may be Github, Facebook, etc)
 9. You'll then be provided with a small screen that has the Client ID and Secret
    (you can click on the name of the Project in Credentials list to view ID and Secret)
+
+DOTENV-RAILS
+-Instead of setting environment variables directly in local ENV hash, use dotenv-rails
+-This is a great way to ensure environment variables are correctly loaded into ENV has securely
+  1. Add dotenv-rails to Gemfile and bundle install
+  2. Create file named .env at root of application
+  3. Add Google credentials(GOOGLE_KEY=ID and GOOGLE_SECRET=Secret) to newly created .env file
+  4. Add .env to .gitignore file to ensure you don't accidentally commit sensitive credentials

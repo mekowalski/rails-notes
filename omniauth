@@ -27,3 +27,19 @@ OMNIAUTH WITH GOOGLE
 -Run bundle install to update Gemfile
 -Tell OAuth about app's OAuth credentials, creating a file named config/initializers/omniauth.rb
 *refer to authentication branch of beer-log app*
+
+ENV
+-Refers to global hash for you're entire computer environment
+-Store any key-value pairs in this hash, useful place to store credentials
+
+1. Obtain OAuth 2.0 credentials from Google API Console
+2. You may have to login into the Google account(i was already logged in)
+3. Menu on left side of screen will have a key icon with the word Credentials attached
+4. Blue drop-down menu names 'Create credentials', select 'OAuth Client ID'
+5. Application type is Web Application
+6. Name whatever you want to call this project with this OAuth client ID
+7. Authorized origins will be the localhost from your terminal, (mine is 'localhost:3000')
+8. Authorized redirect URIs will be 'localhost:3000/auth/provider/callback'
+   (my provider is google, yours may be Github, Facebook, etc)
+9. You'll then be provided with a small screen that has the Client ID and Secret
+   (you can click on the name of the Project in Credentials list to view ID and Secret)

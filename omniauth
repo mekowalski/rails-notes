@@ -51,3 +51,7 @@ DOTENV-RAILS
   2. Create file named .env at root of application
   3. Add Google credentials(GOOGLE_KEY=ID and GOOGLE_SECRET=Secret) to newly created .env file
   4. Add .env to .gitignore file to ensure you don't accidentally commit sensitive credentials
+
+ROUTING OAUTH FLOW IN APPLICATIONS
+-Need to create link that will initiate Google OAuth process
+  (standard oauth path is /auth/:provider)

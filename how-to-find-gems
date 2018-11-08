@@ -20,3 +20,19 @@ WHERE TO LOOK
 -TRT is comprehensive to sift through, great for exploring all options
 -Awesome Ruby and Awesome Rails Gem are 2 open sources, community-maintained lists of the most popular gems
  for Ruby and Rails by category
+
+
+QUALITIES OF CHOOSING A GEM
+-Adding a gem to a project also takes on dependency of outside code
+  -dependencies may have security issues, bugs, compatibility issues
+
+How Popular Is It
+-A more popular gem is a more maintained gem
+-Also able to find more help running into issues
+-A simple guideline to test gem popularity
+1. look it up on Ruby Toolbox, checkout downloads made, how recent commits are, how many versions there are
+2. see if it's also on Awesome Ruby and Awesome Rails Gem
+3. Google gem name and see what results, prominently how recently it was update, checkout tutorials and
+   name errors
+4. Search StackOverflow for the gem regarding what people say of that gem
+5. Search Github usage of gem, read the documentation or code and search its methods or classes

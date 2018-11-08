@@ -36,3 +36,13 @@ How Popular Is It
    name errors
 4. Search StackOverflow for the gem regarding what people say of that gem
 5. Search Github usage of gem, read the documentation or code and search its methods or classes
+
+How Well-Maintained Is It
+1. Read code for consistent structure as expected, is it easy to follow, understand
+2. Look for documentation, is it commonly documented, descriptive, example-provided README or bare minimum
+3. What are the issues and PRs, how long are they open, how active are committees with issues, are there
+   problems with specific version that isn't or is solved?
+4. Look for tests, are there /test or /spec DIRs, how many tests, is there a continuous integration
+
+-Gems are powerful, great and crucial for developers but with some elbow grease, you'll understand what gems
+ are actually necessary to create your project

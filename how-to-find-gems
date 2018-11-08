@@ -5,3 +5,18 @@ Gems previously used(to name a few):
   -Spring to keep continuous application running in background
   -Rails for all things rails, to create a full-stack framework for applications
   -Sqlite as a database for ActiveRecord
+
+
+DO YOU NEED A GEM
+-Gems are available for use in everyone's projects, setting Ruby apart from other languages
+-A side effect is: Gem Madness-where gems are used to solve every problem without consideration of actual gem
+ usage
+
+WHERE TO LOOK
+-In console: `gem search` command takes a regular expression(regex) that is handy when a name or part of a
+ name of a gem is known
+-The Ruby Toolbox is a great site that collects and sorts rems by rank of:
+ downloads, releases and active commits
+-TRT is comprehensive to sift through, great for exploring all options
+-Awesome Ruby and Awesome Rails Gem are 2 open sources, community-maintained lists of the most popular gems
+ for Ruby and Rails by category

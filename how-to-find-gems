@@ -1,0 +1,7 @@
+Gems previously used(to name a few):
+  -RSpec testing
+  -Bycrpt for secure password
+  -OmniAuth for login via third party
+  -Spring to keep continuous application running in background
+  -Rails for all things rails, to create a full-stack framework for applications
+  -Sqlite as a database for ActiveRecord
